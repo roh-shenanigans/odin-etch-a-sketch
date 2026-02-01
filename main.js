@@ -21,11 +21,13 @@ for (let i = 0; i < 16; i++) {
 
 
 function createGrid(event) {
-    len = Number(prompt("Enter no. of cells per side"))
-
+    input = prompt("Enter no. of cells per side");
+    
     if (len === null) {
         return;
     }
+
+    len = Number(input);
 
     if (len > 100) {
         alert("Maximum grid size is 100x100 cells, please enter a smaller value");
