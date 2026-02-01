@@ -21,9 +21,15 @@ for (let i = 0; i < 16; i++) {
 
 
 function createGrid(event) {
-    scratchpad.replaceChildren();
     len = Number(prompt("Enter no. of cells per side"))
 
+    if (len > 100) {
+        alert("Maximum grid size is 100x100 cells, please enter a smaller value");
+        return;
+    }
+
+    scratchpad.replaceChildren();
+    
     for (let i = 0; i < len; i++) {
         let container = document.createElement("div");
         container.className = "row-container";
