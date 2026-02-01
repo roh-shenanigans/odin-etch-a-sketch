@@ -53,8 +53,16 @@ function createGrid(event) {
     console.log("Grid created");
 }
 
-function paintCell(event) {
-    let cell = event.target;
+function getRandomColor() {
+    let red = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
 
-    cell.style.backgroundColor = "grey";
+    return `rgb(${red}, ${blue}, ${green})`;
+}
+
+function paintCell(event) {
+    let cell = event.target;    
+
+    cell.style.backgroundColor = getRandomColor();
 }
