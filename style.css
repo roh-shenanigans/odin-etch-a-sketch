@@ -19,8 +19,13 @@ body {
 }
 
 #scratchpad {
+    margin-top: -40px;
     display: flex;
+    align-self: center;
     flex-direction: column;
+    flex: 0 0 auto;
+    width: 600px;
+    aspect-ratio: 1 / 1;
 }
 
 #create-grid {
@@ -53,8 +58,8 @@ body {
 }
 
 .cell { 
-    width: 40px;
-    /* flex: 1 0 auto; */
+    /* width: 40px; */
+    flex: 1 0 auto;
     aspect-ratio: 1 / 1;
     border: 1px solid black;
 }
