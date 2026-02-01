@@ -3,20 +3,19 @@ let scratchpad = document.querySelector("#scratchpad");
 let newGridBtn = document.querySelector("#create-grid");
 newGridBtn.addEventListener("click", createGrid);
 
-// len = Number(prompt("Enter no. of cells per side"))
 
-// for (let i = 0; i < len; i++) {
-//     let container = document.createElement("div");
-//     container.className = "row-container";
+for (let i = 0; i < 16; i++) {
+    let container = document.createElement("div");
+    container.className = "row-container";
 
-//     for (let i = 0; i < len; i++) {
-//         let cell = document.createElement("div");
-//         cell.className = "cell";
-//         container.appendChild(cell);
-//     }
+    for (let i = 0; i < 16; i++) {
+        let cell = document.createElement("div");
+        cell.className = "cell";
+        container.appendChild(cell);
+    }
 
-//     scratchpad.appendChild(container);    
-// }
+    scratchpad.appendChild(container);    
+}
 
 
 function createGrid(event) {

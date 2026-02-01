@@ -24,7 +24,20 @@ body {
 }
 
 #create-grid {
-    margin: 70px 500px;
+    margin: 70px 700px;
+    padding: 10px;
+    font-weight: 600;
+    background-color: green;
+    color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transition: background-color 0.2s;
+}
+
+#create-grid:hover {
+    background-color: limegreen;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .row-container {
@@ -37,8 +50,9 @@ body {
 }
 
 .cell { 
-    width: 100px;
+    width: 40px;
     /* flex: 1 0 auto; */
     aspect-ratio: 1 / 1;
     border: 1px solid black;
 }
+
