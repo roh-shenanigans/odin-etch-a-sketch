@@ -1,4 +1,5 @@
 let scratchpad = document.querySelector("#scratchpad");
+scratchpad.addEventListener("mouseover", paintCell);
 
 let newGridBtn = document.querySelector("#create-grid");
 newGridBtn.addEventListener("click", createGrid);
@@ -12,7 +13,6 @@ for (let i = 0; i < 16; i++) {
     for (let i = 0; i < 16; i++) {
         let cell = document.createElement("div");
         cell.className = "cell";
-        cell.addEventListener("mouseover", paintCell);
         container.appendChild(cell);
     }
 
@@ -43,7 +43,6 @@ function createGrid(event) {
         for (let i = 0; i < len; i++) {
             let cell = document.createElement("div");
             cell.className = "cell";
-            cell.addEventListener("mouseover", paintCell);
             container.appendChild(cell);
         }
 
@@ -54,6 +53,8 @@ function createGrid(event) {
 }
 
 function paintCell(event) {
+    console.log(event.target);
+    console.log(event.currentTarget);
     let cell = event.target;
 
     cell.style.backgroundColor = "grey";
