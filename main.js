@@ -1,4 +1,4 @@
-let body = document.querySelector("body");
+let scratchpad = document.querySelector("#scratchpad");
 
 len = Number(prompt("Enter no. of cells per side"))
 
@@ -12,5 +12,7 @@ for (let i = 0; i < len; i++) {
         container.appendChild(cell);
     }
 
-    body.appendChild(container);
+    scratchpad.appendChild(container);
 }
+
+// function 
