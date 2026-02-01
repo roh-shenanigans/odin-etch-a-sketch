@@ -24,8 +24,10 @@ body {
 }
 
 #create-grid {
-    margin: 70px 700px;
-    flex-basis: auto;
+    margin: 70px 400px;
+    flex: 0 0 auto;
+    width: 100px;
+    align-self: center;
     padding: 10px;
     font-weight: 600;
     background-color: green;
