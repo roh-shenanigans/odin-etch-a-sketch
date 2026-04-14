@@ -83,8 +83,6 @@ function createGrid(event) {
 }
 
 function paintCell(event) {
-    // console.log(event.target);
-    // console.log(event.currentTarget);
     let cell = event.target;
 
     cell.style.backgroundColor = "grey";
@@ -93,45 +91,13 @@ function paintCell(event) {
 
 function paintCellGradual(event) {
     let cell = event.target;
-    // console.log(window.getComputedStyle(cell).backgroundColor.split(","));
-    // let cellColor = window.getComputedStyle(cell).backgroundColor;
     
-    // cell.style.filter = 'brightness(50%)';
-    // console.log(cell.style.filter);
-
     let filterVal = window.getComputedStyle(cell).filter;
     console.log(filterVal); 
     let brightness = parseFloat(filterVal.slice(11));
     console.log(brightness)
 
     cell.style.filter = `brightness(${brightness - 0.1})`;
-    // cell.style.filter = `brightness(0)`;
-    // console.log(cell.style.filter);
-
-    // if (cell.classList.contains("painted")) {
-    //     let brightness = parseInt(cell.style.filter.slice(11));
-    //     console.log(cell.style.filter);
-    //     cell.style.filter = `${brightness - 10}%`;
-    //     console.log(cell.style.filter);
-    // } else {
-    //     cell.classList.add("painted");
-    //     cell.style.filter = "brightness(90%)";
-    // }
-
-    // if (cell.classList.contains("painted")) {
-    //     let prevColor = window.getComputedStyle(cell).backgroundColor.split(",");
-    //     // let r = parseFloat(prevColor[0].slice(5));
-    //     // let g = parseFloat(prevColor[1])
-    //     // let b = parseFloat(prevColor[2])
-    //     let a = prevColor[3] ? parseFloat(prevColor[3]) : 1;
-    //     // console.log(alpha);
-    //     // console.log(`rgb(${r}, ${g}, ${b}, ${a + 0.1})`);
-    //     // cell.style.backgroundColor = `rgb(${r}, ${g}, ${b}, ${a + 0.1})`;
-    //     cell.style.backgroundColor = `rgb(0, 0, 0, ${a + 0.1})`;
-    // } else {
-    //     cell.style.backgroundColor = "rgb(0, 0, 0, 0.1)"
-    //     cell.classList.add("painted");
-    // }
 }
 
 function getRandomColor() {
